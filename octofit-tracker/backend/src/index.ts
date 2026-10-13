@@ -1,12 +1,10 @@
 import { connectDatabase } from './config/database.js';
-import app from './server.js';
-
-const port = Number(process.env.PORT) || 8000;
+import app, { baseUrl, port } from './server.js';
 
 async function startServer(): Promise<void> {
   await connectDatabase();
   app.listen(port, () => {
-    console.log(`OctoFit API listening on port ${port}`);
+    console.log(`OctoFit API available at ${baseUrl}`);
   });
 }
 
