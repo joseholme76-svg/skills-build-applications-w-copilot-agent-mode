@@ -10,8 +10,8 @@ const app = express();
 export const port = 8000;
 const codespaceName = process.env.CODESPACE_NAME;
 export const baseUrl = codespaceName
-  ? `https://${codespaceName}-${port}.app.github.dev`
-  : `http://localhost:${port}`;
+  ? `https://${codespaceName}-8000.app.github.dev`
+  : 'http://localhost:8000';
 
 const allowedOrigins = new Set([
   'http://localhost:5173',
